@@ -43,3 +43,13 @@ if not filtered_df.empty:
 
     # Display the map in Streamlit
     folium_static(m)
+
+# Add a button for reporting issues
+if st.button('Report an Issue'):
+    # Display a form for entering issue details
+    issue = st.text_input('Please describe the issue:')
+    email = st.text_input('Enter your email (optional):')
+    if st.button('Submit Issue'):
+        # Handle the issue report here
+        # For example, you could send an email, write to a database, etc.
+        st.write('Thank you for reporting this issue.')
